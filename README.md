@@ -1,0 +1,1 @@
+Train a simple neural net to learn XOR function using Keras
