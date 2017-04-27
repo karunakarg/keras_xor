@@ -70,10 +70,10 @@ while True:
 	input_values = input_values.split(",")
 	# convert the input to a numpy array, as keras only understands numpy data types
 	input_values = numpy.array(input_values)
-	# Neural net takes in a list of examples and returns a list of predictions for each of them
-	# So, we initialize an empty 2D array with 1 row and 2 columns, as we want prediction for 1 example which has 2 features
+	# Neural net takes in a list of input samples and returns a list of predictions for each of them
+	# So, we initialize an empty 2D array with 1 row and 2 columns, as we want prediction for 1 sample which has 2 features
 	input_vector = numpy.zeros(shape=(1, 2))
-	# add our example to 2d vector (input_vector)
+	# add our input sample to 2d vector (i.e. input_vector)
 	input_vector[0] = input_values
 	# print prediction
 	print model.predict_proba(input_vector)
